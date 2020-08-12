@@ -8,7 +8,7 @@ set programa=%~dp0\service.cmd
 set desc=Project2 Project2
 
 ::criar os registros de service
-HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\services\jswpbapi
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\services\%nome%
 call:registrar "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\services\%nome%" "%nome%" "%desc%" "%programa%"
 call:registrar "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\services\%nome%" "%nome%" "%desc%" "%programa%"
 call:registrar "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\%nome%" "%nome%" "%desc%" "%programa%"
